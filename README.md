@@ -13,3 +13,17 @@ This PowerShell script is designed to gather comprehensive site information for 
 
 - Identifies and lists all .MP4 files within the specified SharePoint sites.
 - Provides a summary of the space occupied by .MP4 files, allowing you to monitor and manage storage usage effectively.
+
+# Prerequisites
+Before running the script, ensure that you have the following:
+
+**PowerShell 7 Modules:**
+```
+Install-Module PnP.PowerShell
+```
+```
+Install-Module Microsoft.Online.SharePoint.PowerShell
+```
+
+**SharePoint Online Credentials:**
+- You need valid credentials with sufficient permissions to access SharePoint Online. Please provide the necessary credentials when prompted.
