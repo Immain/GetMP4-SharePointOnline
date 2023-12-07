@@ -18,7 +18,7 @@ $SiteURL = "<your sharepoint site>"
 
 # Connect to SharePoint Online from PowerShell using PnP PowerShell
 
-Connect-PnPOnline -Url $SiteURL
+Connect-PnPOnline -Url $SiteURL -UseWebLogin
 
 # Get All Site Collections
 
