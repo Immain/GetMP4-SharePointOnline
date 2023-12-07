@@ -18,10 +18,10 @@ This PowerShell script is designed to gather comprehensive site information for 
 Before running the script, ensure that you have the following:
 
 **PowerShell 7 Modules:**
-```
+```powershell
 Install-Module PnP.PowerShell
 ```
-```
+```powershell
 Install-Module Microsoft.Online.SharePoint.PowerShell
 ```
 
