@@ -1,5 +1,4 @@
 # Import necessary modules
-Import-Module Microsoft.Online.SharePoint.PowerShell
 Import-Module PnP.PowerShell
 
 # Set variables for the first script
@@ -13,7 +12,7 @@ $Sites = Import-Csv -Path $CSVSitesPath
 # Loop through each site
 foreach ($Site in $Sites) {
     # Connect to SharePoint Online site
-    Connect-PnPOnline $Site.URL -UseWebLogin
+    Connect-PnPOnline $Site.URL -Interactive
 
     # Get all Documents Libraries from the site
     $ExcludedLists = @("Style Library", "Wiki", "Form Templates", "Images", "Pages", "Site Pages", "Preservation Hold Library", "Site Assets")
@@ -63,7 +62,7 @@ foreach ($Site in $Sites) {
     }
 
     # Disconnect from SharePoint Online site
-    Disconnect-PnPOnline -Force
+    Disconnect-PnPOnline
 }
 
 # Export data to CSV File
