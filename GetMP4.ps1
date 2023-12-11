@@ -12,7 +12,7 @@ $Sites = Import-Csv -Path $CSVSitesPath
 # Loop through each site
 foreach ($Site in $Sites) {
     # Connect to SharePoint Online site
-    Connect-PnPOnline $Site.URL -Interactive
+    Connect-PnPOnline $Site.URL -UseWebLogin
 
     # Get all Documents Libraries from the site
     $ExcludedLists = @("Style Library", "Wiki", "Form Templates", "Images", "Pages", "Site Pages", "Preservation Hold Library", "Site Assets")
